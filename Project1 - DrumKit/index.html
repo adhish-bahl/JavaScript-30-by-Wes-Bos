@@ -59,11 +59,13 @@
 
 <script>
   window.addEventListener("keydown", function(e) {
-	const beat = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-	// console.log(beat);
-	beat.currentTime = 0;
+	const beat = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 	if(!beat)
 		return;
+	const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+	key.classList.add("playing");
+	beat.currentTime = 0;
+	console.log(key);
 	beat.play();
   });
 </script>

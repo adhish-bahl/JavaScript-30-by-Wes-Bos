@@ -68,6 +68,13 @@
 	console.log(key);
 	beat.play();
   });
+
+  const key = document.querySelectorAll(".key");
+  key.forEach(key => key.addEventListener("transitionend", function(e) {
+	  if(e.propertyName !== "transform")
+	  	return;
+	  this.classList.remove("playing");
+  }))
 </script>
 
 

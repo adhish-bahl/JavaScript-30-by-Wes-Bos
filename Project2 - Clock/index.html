@@ -80,6 +80,10 @@
       const second = dateNow.getSeconds();
       const secondDegrees = ((second / 60) * 360) + 90;
       secHand.style.transform = `rotate(${secondDegrees}deg)`;
+
+      const minute = dateNow.getMinutes();
+      const minDegrees = ((minute / 60) * 360) + ((seconds/60)*30) + 90;
+      minHand.style.transform = `rotate(${minDegrees}deg)`;
     }
 
   </script>

@@ -74,6 +74,14 @@
     const minHand = document.querySelector(".min-hand");
     const hourHand = document.querySelector(".hour-hand");
 
+    function setDate() {
+      const dateNow = new Date();
+
+      const second = dateNow.getSeconds();
+      const secondDegrees = ((second / 60) * 360) + 90;
+      secHand.style.transform = `rotate(${secondDegrees}deg)`;
+    }
+
   </script>
 </body>
 </html>

@@ -27,9 +27,15 @@
       --blur: 10px;
     }
 
-    /*
-      misc styles, nothing to do with CSS variables
-    */
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
+    }
 
     body {
       text-align: center;

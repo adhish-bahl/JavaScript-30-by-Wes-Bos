@@ -53,10 +53,15 @@
       else 
       return -1;
     });
+    // const Ans3B = inventors.sort((a, b) => a.year > b.year ? 1:-1);
     console.log(Ans3);
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+    const Ans4 = inventors.reduce((total, inventors) => {
+      return total + (inventors.passed - inventors.year)
+    }, 0);
+    console.log(Ans4);
 
     // 5. Sort the inventors by years lived
 

@@ -131,7 +131,12 @@
   </div>
 
   <script>
+    const panel = document.querySelectorAll(".panel");
 
+    panel.forEach(panel => panel.addEventListener('click', openTransition));
+    function openTransition() {
+      this.classList.toggle("open");
+    }
   </script>
 
 
